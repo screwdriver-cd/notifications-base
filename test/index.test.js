@@ -1,7 +1,6 @@
 'use strict';
 
-const assert = require('chai').assert;
-const expect = require('chai').expect;
+const { assert, expect } = require('chai');
 const sinon = require('sinon');
 
 describe('index test', () => {
