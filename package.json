@@ -1,6 +1,6 @@
 {
   "name": "screwdriver-notifications-base",
-  "version": "4.0.0",
+  "version": "3.0.0",
   "description": "Base class for defining the behavior between screwdriver and notifications plugins",
   "main": "index.js",
   "scripts": {
