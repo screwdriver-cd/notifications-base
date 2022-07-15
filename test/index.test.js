@@ -25,11 +25,11 @@ describe('index test', () => {
     });
 
     it('should get events', () => {
-        assert.deepEqual(instance.events, ['build_status']);
+        assert.deepEqual(instance.events, ['build_status', 'job_status']);
     });
 
     it('should catch an error', () => {
-        instance.notify({});
+        instance.notify('build_status', {});
         // eslint-disable-next-line
         expect(this.consoleSpy.calledOnce).to.be.true;
     });
