@@ -18,17 +18,18 @@ class NotificationBase {
      * @return {Array}
      */
     get events() {
-        return ['build_status'];
+        return ['build_status', 'job_status'];
     }
 
     /**
      * Listen to the event and notify users based on their job settings
-     * @param {Object}      buildData           Build data emitted with some event from Screwdriver
+     * @param {String}      event         Event emmited from Screwdriver
+     * @param {Object}      payload       Data emitted with some event from Screwdriver
      * @method notify
      */
-    notify(buildData) {
+    notify(event, payload) {
         try {
-            this._notify(buildData);
+            this._notify(event, payload);
         } catch (e) {
             // eslint-disable-next-line no-console
             console.error(e);
@@ -36,7 +37,7 @@ class NotificationBase {
     }
 
     // eslint-disable-next-line no-unused-vars
-    _notify(buildData) {
+    _notify(event, payload) {
         throw new Error('Not implemented');
     }
 }
