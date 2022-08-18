@@ -37,7 +37,7 @@ class NotificationBase {
     }
 
     // eslint-disable-next-line no-unused-vars
-    _notify(event, buildData) {
+    _notify(event, payload) {
         throw new Error('Not implemented');
     }
 }
